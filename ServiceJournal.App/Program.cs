@@ -1,6 +1,9 @@
-﻿using ServiceJournal.Logic;
+﻿using ServiceJournal.Data;
+using ServiceJournal.Logic;
 
-var service = new RepairService();
+IRepairRepository repository = new DemoRepairRepository();
+
+var service = new RepairService(repository);
 
 Console.WriteLine("Отобранные записи:");
 
