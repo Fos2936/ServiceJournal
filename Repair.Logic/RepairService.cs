@@ -1,11 +1,15 @@
 using System.Collections.Generic;
-using ServiceJournal.Data;
 
 namespace ServiceJournal.Logic;
 
 public class RepairService
 {
-    private readonly RepairRepository _repository = new();
+    private readonly IRepairRepository _repository;
+
+    public RepairService(IRepairRepository repository)
+    {
+        _repository = repository;
+    }
 
     public List<Repair> GetImportant()
     {
