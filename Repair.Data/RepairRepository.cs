@@ -12,4 +12,9 @@ public class RepairRepository : IRepairRepository
     };
 
     public List<Repair> GetAll() => _items;
+
+    public void Add(Repair item)
+    {
+        // Демонстрационное хранилище доступно только для чтения
+    }
 }

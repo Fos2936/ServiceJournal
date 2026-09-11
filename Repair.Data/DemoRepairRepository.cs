@@ -12,4 +12,9 @@ public class DemoRepairRepository : IRepairRepository
             new Repair { Id = 33, Equipment = "Воздушный компрессор", IsDone = false }
         };
     }
+
+    public void Add(Repair item)
+    {
+        // Демонстрационное хранилище доступно только для чтения
+    }
 }
